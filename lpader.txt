@@ -1,0 +1,199 @@
+local api = loadstring(game:HttpGet("https://sdkapi-public.luarmor.net/library.lua"))()
+api.script_id = "edf760b8704c87a87799653c0f80cb6b"
+
+function loadUI()
+	local screen = Instance.new("ScreenGui", game:GetService("CoreGui"))
+	screen.Name = "Screen"
+	screen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	
+	local main = Instance.new("ImageLabel")
+	main.Name = "Main"
+	main.AnchorPoint = Vector2.new(0.5, 0.5)
+	main.BackgroundColor3 = Color3.new(1, 1, 1)
+	main.Image = "rbxassetid://115478557789260"
+	main.Position = UDim2.fromScale(0.5, 0.5)
+	main.ScaleType = Enum.ScaleType.Crop
+	main.Size = UDim2.fromScale(0.331, 0,0.319)
+
+	local getKey = Instance.new("TextButton")
+	getKey.Name = "GetKey"
+	getKey.BackgroundColor3 = Color3.fromRGB(33, 47, 84)
+	getKey.FontFace = Font.new("rbxasset://fonts/families/FredokaOne.json")
+	getKey.Position = UDim2.fromScale(0.0951276, 0.525862)
+	getKey.Size = UDim2.fromScale(0.396752, 0.198276)
+	getKey.Text = "Get Key"
+	getKey.TextColor3 = Color3.new(1, 1, 1)
+	getKey.TextScaled = true
+
+	local uICorner = Instance.new("UICorner")
+	uICorner.Name = "UICorner"
+	uICorner.CornerRadius = UDim.new(0.1, 0)
+	uICorner.Parent = getKey
+
+	local uIPadding = Instance.new("UIPadding")
+	uIPadding.Name = "UIPadding"
+	uIPadding.PaddingBottom = UDim.new(0.1, 0)
+	uIPadding.PaddingTop = UDim.new(0.1, 0)
+	uIPadding.Parent = getKey
+
+	local uIStroke = Instance.new("UIStroke")
+	uIStroke.Name = "UIStroke"
+	uIStroke.Thickness = 2
+	uIStroke.Parent = getKey
+
+	local uIStroke1 = Instance.new("UIStroke")
+	uIStroke1.Name = "UIStroke"
+	uIStroke1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	uIStroke1.Thickness = 2
+	uIStroke1.Parent = getKey
+
+	getKey.Parent = main
+
+	local uIStroke2 = Instance.new("UIStroke")
+	uIStroke2.Name = "UIStroke"
+	uIStroke2.Color = Color3.new(1, 1, 1)
+	uIStroke2.Thickness = 2
+	uIStroke2.Parent = main
+
+	local uICorner1 = Instance.new("UICorner")
+	uICorner1.Name = "UICorner"
+	uICorner1.CornerRadius = UDim.new(0.03, 0)
+	uICorner1.Parent = main
+
+	local redeem = Instance.new("TextButton")
+	redeem.Name = "Redeem"
+	redeem.BackgroundColor3 = Color3.fromRGB(100, 144, 255)
+	redeem.FontFace = Font.new("rbxasset://fonts/families/FredokaOne.json")
+	redeem.Position = UDim2.fromScale(0.508121, 0.525862)
+	redeem.Size = UDim2.fromScale(0.396752, 0.198276)
+	redeem.Text = "Redeem"
+	redeem.TextColor3 = Color3.new(1, 1, 1)
+	redeem.TextScaled = true
+
+	local uICorner2 = Instance.new("UICorner")
+	uICorner2.Name = "UICorner"
+	uICorner2.CornerRadius = UDim.new(0.1, 0)
+	uICorner2.Parent = redeem
+
+	local uIPadding1 = Instance.new("UIPadding")
+	uIPadding1.Name = "UIPadding"
+	uIPadding1.PaddingBottom = UDim.new(0.1, 0)
+	uIPadding1.PaddingTop = UDim.new(0.1, 0)
+	uIPadding1.Parent = redeem
+
+	local uIStroke3 = Instance.new("UIStroke")
+	uIStroke3.Name = "UIStroke"
+	uIStroke3.Thickness = 2
+	uIStroke3.Parent = redeem
+
+	local uIStroke4 = Instance.new("UIStroke")
+	uIStroke4.Name = "UIStroke"
+	uIStroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	uIStroke4.Thickness = 2
+	uIStroke4.Parent = redeem
+
+	redeem.Parent = main
+
+	local keyBox = Instance.new("TextBox")
+	keyBox.Name = "KeyBox"
+	keyBox.BackgroundColor3 = Color3.fromRGB(33, 47, 84)
+	keyBox.ClearTextOnFocus = false
+	keyBox.CursorPosition = -1
+	keyBox.FontFace = Font.new("rbxasset://fonts/families/FredokaOne.json")
+	keyBox.PlaceholderColor3 = Color3.new(1, 1, 1)
+	keyBox.PlaceholderText = "Key"
+	keyBox.Position = UDim2.fromScale(0.0951276, 0.275862)
+	keyBox.Size = UDim2.fromScale(0.809745, 0.215517)
+	keyBox.Text = ""
+	keyBox.TextColor3 = Color3.new(1, 1, 1)
+	keyBox.TextScaled = true
+
+	local uIPadding2 = Instance.new("UIPadding")
+	uIPadding2.Name = "UIPadding"
+	uIPadding2.PaddingBottom = UDim.new(0.1, 0)
+	uIPadding2.PaddingTop = UDim.new(0.1, 0)
+	uIPadding2.Parent = keyBox
+
+	local uICorner3 = Instance.new("UICorner")
+	uICorner3.Name = "UICorner"
+	uICorner3.CornerRadius = UDim.new(0.1, 0)
+	uICorner3.Parent = keyBox
+
+	local uIStroke5 = Instance.new("UIStroke")
+	uIStroke5.Name = "UIStroke"
+	uIStroke5.Thickness = 2
+	uIStroke5.Parent = keyBox
+
+	local uIStroke6 = Instance.new("UIStroke")
+	uIStroke6.Name = "UIStroke"
+	uIStroke6.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	uIStroke6.Thickness = 2
+	uIStroke6.Parent = keyBox
+
+	keyBox.Parent = main
+
+	local text = Instance.new("TextLabel")
+	text.Name = "Text"
+	text.Active = true
+	text.BackgroundTransparency = 1
+	text.FontFace = Font.new("rbxasset://fonts/families/FredokaOne.json")
+	text.Position = UDim2.fromScale(0.301624, 0.0344828)
+	text.Selectable = true
+	text.Size = UDim2.fromScale(0.396752, 0.198276)
+	text.Text = "Overflow"
+	text.TextColor3 = Color3.new(1, 1, 1)
+	text.TextScaled = true
+
+	local uICorner4 = Instance.new("UICorner")
+	uICorner4.Name = "UICorner"
+	uICorner4.CornerRadius = UDim.new(0.1, 0)
+	uICorner4.Parent = text
+
+	local uIPadding3 = Instance.new("UIPadding")
+	uIPadding3.Name = "UIPadding"
+	uIPadding3.PaddingBottom = UDim.new(0.1, 0)
+	uIPadding3.PaddingTop = UDim.new(0.1, 0)
+	uIPadding3.Parent = text
+
+	local uIStroke7 = Instance.new("UIStroke")
+	uIStroke7.Name = "UIStroke"
+	uIStroke7.Thickness = 2
+	uIStroke7.Parent = text
+
+	text.Parent = main
+
+	main.Parent = screen
+	main.Draggable = true
+	return main
+end
+if not isfile("Overflow/key") or  api.check_key(readfile("Overflow/key")).code ~= "KEY_VALID" then
+	local main = loadUI()
+	local keyBox = main.KeyBox
+	local getKey = main.GetKey
+	local redeem = main.Redeem
+	getKey.Activated:Connect(function()
+		setclipboard("https://ads.luarmor.net/get_key?for=key-xizANDvIwBwq")
+		getKey.Text = "Copied"
+		wait(2)
+		getKey.Text = "Get Key"
+	end)
+	redeem.Activated:Connect(function()
+		if  api.check_key(keyBox.Text).code == "KEY_VALID" then
+			redeem.Text = "Success"
+			main.Parent:Destroy()
+			writefile("Overflow/key", keyBox.Text)
+			script_key = keyBox.Text
+			api.load_script(); 
+		else
+			redeem.Text = "Check Output"
+			warn(api.check_key(keyBox.Text).code)
+		end
+		wait(.5)
+		if redeem then
+			redeem.Text = "Redeem"
+		end
+	end)
+elseif  isfile("Overflow/key") and  api.check_key(readfile("Overflow/key")).code== "KEY_VALID" then
+	script_key = readfile("Overflow/key")
+	api.load_script(); 
+end
